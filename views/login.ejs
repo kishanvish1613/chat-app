@@ -3,16 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-
+    <title>login</title>
 </head>
 <body>
-    <form action="" method="post" enctype="multipart/form-data">
-        <input type="text" name="name" placeholder="Enter name" required>
-        <input type="file" name="image" required>
+    <form action="/dashboard" method="post">
         <input type="email" name="email" placeholder="Enter email" required>
         <input type="password" name="password" placeholder="Enter password" required>
-        <input type="submit" value="Register">   
+        <input type="submit" value="login">
     </form>
     <% if (typeof message !== 'undefined') { %>
         <p><%= message %></p>

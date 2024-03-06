@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/stylesheet/homestyle.css">
+</head>
+<body>
+    <div id="container">
+        <div id="main-content">
+            <div id="welcome-heading">
+                <h1>Welcome👋</h1>
+            </div>
+            <form action="/" method="post" enctype="multipart/form-data">
+                <input type="text" name="name" placeholder="Enter name" required>
+                <input type="file" name="image" required>
+                <input type="email" name="email" placeholder="Enter email" required>
+                <input type="password" name="password" placeholder="Enter password" required>
+                <input type="submit" value="Register">   
+            </form>
+            <% if (typeof message !== 'undefined') { %>
+                <p><%= message %></p>
+            <% } %>
+            
+            <input type="button" value="Login" id="loginButton">
+        
+        </div>
+    </div>
+    <script>
+        document.getElementById("loginButton").addEventListener("click", function() {
+            window.location.href = "/login";
+        });
+    </script>
+</body>
+</html>

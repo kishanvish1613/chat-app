@@ -2,12 +2,14 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import connect from './config/db-Config.js';
 import UserRoutes from './routes/user-route.js'
+import path from 'path';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static(path.join('public')));
 
 app.use('/', UserRoutes);
 
